@@ -206,21 +206,5 @@ Based on 2,313 real applications from the Ministry:
 
 ---
 
-## 👥 Stakeholders
-
-- **Ann-Marie Brown** - Case Management Technical Coordinator, MLSS
-- **Danielle Simmonds** - Social Worker, MLSS
-- **Nerissa Haughton** - Assistant Financial Manager (Acting), MLSS
-
----
-
-## 📧 Contact
-
-**Israel Brown**  
-Email: menelek7171@byui.edu  
-Phone: 876-293-8644
-
----
-
 **Last Updated:** February 7, 2026  
 **Version:** 1.0 (Technology Prototype)
