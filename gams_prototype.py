@@ -14,6 +14,7 @@ the workflow state machine concept using actual Ministry data.
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 from datetime import datetime
 from collections import Counter
 
@@ -304,7 +305,7 @@ class GAMSPrototype:
         plt.tight_layout()
         
         # Save the dashboard
-        output_file = '/home/claude/gams_dashboard.png'
+        output_file = 'C:\\Users\\Administrator\\Documents\\CSE499-test\\gams_dashboard.png'
         plt.savefig(output_file, dpi=300, bbox_inches='tight')
         print(f"✓ Dashboard saved to: {output_file}")
         
@@ -414,7 +415,27 @@ def main():
     print("\n")
     
     # Initialize the prototype
-    data_file = '/mnt/user-data/uploads/Hanover__Rehabilitation_Program_Database_.xlsx'
+    # Try multiple possible paths for the data file
+    possible_paths = [
+        '/mnt/user-data/uploads/Hanover__Rehabilitation_Program_Database_.xlsx',  # Cloud/container path
+        'Hanover__Rehabilitation_Program_Database_.xlsx',  # Local directory (Windows/Mac/Linux)
+        '../Hanover__Rehabilitation_Program_Database_.xlsx',  # Parent directory
+    ]
+    
+    data_file = None
+    for path in possible_paths:
+        if os.path.exists(path):
+            data_file = path
+            break
+    
+    if data_file is None:
+        print("ERROR: Could not find the database file.")
+        print("\nPlease ensure 'Hanover__Rehabilitation_Program_Database_.xlsx' is in:")
+        print("  - The same directory as gams_prototype.py, OR")
+        print("  - The parent directory")
+        print("\nCurrent working directory:", os.getcwd())
+        return
+    
     gams = GAMSPrototype(data_file)
     
     # Run demonstration sequence

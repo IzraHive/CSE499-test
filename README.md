@@ -71,6 +71,16 @@ Analyzes workload distribution across social workers, identifying:
 
 ### Installation
 
+**Windows (VSCode):**
+```bash
+# Install required libraries
+python -m pip install pandas matplotlib openpyxl
+
+# Run the prototype
+python gams_prototype.py
+```
+
+**Mac/Linux:**
 ```bash
 # Install required libraries
 pip install pandas matplotlib openpyxl
@@ -78,6 +88,8 @@ pip install pandas matplotlib openpyxl
 # Run the prototype
 python gams_prototype.py
 ```
+
+**Note:** On Windows, if `pip` is not recognized, always use `python -m pip` instead.
 
 ### Expected Output
 The prototype will:
@@ -199,6 +211,8 @@ Based on 2,313 real applications from the Ministry:
 - **Ann-Marie Brown** - Case Management Technical Coordinator, MLSS
 - **Danielle Simmonds** - Social Worker, MLSS
 - **Nerissa Haughton** - Assistant Financial Manager (Acting), MLSS
+
+---
 
 ## 📧 Contact
 
